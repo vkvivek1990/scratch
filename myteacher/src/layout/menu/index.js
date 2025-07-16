@@ -65,6 +65,11 @@ export default function BasicGrid() {
                 Register
               </Link>
             </Grid>
+            <Grid size={2}>
+              <Link className="link" to="/reports">
+                Reports
+              </Link>
+            </Grid>
           </Grid>
         </Grid>
         <Grid size={4}>

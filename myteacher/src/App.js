@@ -6,6 +6,7 @@ import Menu from "./layout/menu";
 import Userslist from "./views/usersList";
 import Register from "./views/usersList/registration/register";
 import Dashboard from "./views/dashboard/dashboard";
+import Reports from "./views/reports/reports";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Dashboard />}></Route>
             <Route path="/users" element={<Userslist />}></Route>
             <Route path="/registration" element={<Register />}></Route>
+            <Route path="/reports" element={<Reports />}></Route>
           </Routes>
         </div>
       </BrowserRouter>

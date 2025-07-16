@@ -1,0 +1,19 @@
+import * as React from "react";
+import { useDemoData } from "@mui/x-data-grid-generator";
+import { DataGrid } from "@mui/x-data-grid";
+
+export default function Reports() {
+  const { data, loading } = useDemoData({
+    dataSet: "Commodity",
+    rowLength: 4,
+    maxColumns: 6,
+  });
+
+  return (
+    <div style={{ height: 300, width: "100%" }}>
+      <DataGrid {...data} loading={loading} showToolbar />
+    </div>
+  );
+}
+
+//export default Reports;

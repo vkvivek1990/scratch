@@ -22,14 +22,14 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import { visuallyHidden } from "@mui/utils";
 
-function createData(id, name, calories, fat, carbs, protein) {
+function createData(id, name, totalTraining, completed, pending, inProgress) {
   return {
     id,
     name,
-    calories,
-    fat,
-    carbs,
-    protein,
+    totalTraining,
+    completed,
+    pending,
+    inProgress,
   };
 }
 
@@ -70,31 +70,31 @@ const headCells = [
     id: "name",
     numeric: false,
     disablePadding: true,
-    label: "Dessert (100g serving)",
+    label: "User Name",
   },
   {
-    id: "calories",
+    id: "totalTraining",
     numeric: true,
     disablePadding: false,
-    label: "Calories",
+    label: "Total Training",
   },
   {
-    id: "fat",
+    id: "completed",
     numeric: true,
     disablePadding: false,
-    label: "Fat (g)",
+    label: "Completed",
   },
   {
-    id: "carbs",
+    id: "pending",
     numeric: true,
     disablePadding: false,
-    label: "Carbs (g)",
+    label: "Pending",
   },
   {
-    id: "protein",
+    id: "inProgress",
     numeric: true,
     disablePadding: false,
-    label: "Protein (g)",
+    label: "In progress",
   },
 ];
 
@@ -194,7 +194,7 @@ function EnhancedTableToolbar(props) {
           id="tableTitle"
           component="div"
         >
-          Nutrition
+          Members List
         </Typography>
       )}
       {numSelected > 0 ? (
@@ -220,11 +220,11 @@ EnhancedTableToolbar.propTypes = {
 
 export default function Userslist() {
   const [order, setOrder] = React.useState("asc");
-  const [orderBy, setOrderBy] = React.useState("calories");
+  const [orderBy, setOrderBy] = React.useState("totalTraining");
   const [selected, setSelected] = React.useState([]);
   const [page, setPage] = React.useState(0);
-  const [dense, setDense] = React.useState(false);
-  const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const [dense, setDense] = React.useState(true);
+  const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
   const handleRequestSort = (event, property) => {
     const isAsc = orderBy === property && order === "asc";
@@ -336,10 +336,10 @@ export default function Userslist() {
                     >
                       {row.name}
                     </TableCell>
-                    <TableCell align="right">{row.calories}</TableCell>
-                    <TableCell align="right">{row.fat}</TableCell>
-                    <TableCell align="right">{row.carbs}</TableCell>
-                    <TableCell align="right">{row.protein}</TableCell>
+                    <TableCell align="right">{row.totalTraining}</TableCell>
+                    <TableCell align="right">{row.completed}</TableCell>
+                    <TableCell align="right">{row.pending}</TableCell>
+                    <TableCell align="right">{row.inProgress}</TableCell>
                   </TableRow>
                 );
               })}
@@ -365,10 +365,10 @@ export default function Userslist() {
           onRowsPerPageChange={handleChangeRowsPerPage}
         />
       </Paper>
-      <FormControlLabel
+      {/* <FormControlLabel
         control={<Switch checked={dense} onChange={handleChangeDense} />}
         label="Dense padding"
-      />
+      /> */}
     </Box>
   );
 }

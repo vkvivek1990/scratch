@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Menu from "./layout/menu";
 import Userslist from "./views/usersList";
 import Register from "./views/usersList/registration/register";
+import Dashboard from "./views/dashboard/dashboard";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Menu />
         <div className="bodyContainer">
           <Routes>
+            <Route path="/" element={<Dashboard />}></Route>
             <Route path="/users" element={<Userslist />}></Route>
             <Route path="/registration" element={<Register />}></Route>
           </Routes>

@@ -1,0 +1,35 @@
+.headerRow{
+    border-bottom: 1px solid #cccccc8f;
+    height: 50px;
+}
+
+p.logo {
+    font-weight: bolder;
+}
+.menuList {   
+    margin-top: 13px;
+    padding-bottom: 18px;
+}
+a.link {
+    text-decoration: none;
+     padding-bottom:16px; 
+    color: #333;
+    text-transform: uppercase;
+}
+a.link:hover {
+   border-bottom:2px solid #333;
+  
+}
+.userinitials {
+    background-color: #e9ecef;
+    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #343a40;
+    font-weight: 400;
+    margin-right: .25rem;
+    height: 40px;
+    width: 40px;
+}

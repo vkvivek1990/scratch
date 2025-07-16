@@ -24,12 +24,16 @@ export default function SelectVariants(props) {
           onChange={handleChange}
           label="Age"
         >
-          <MenuItem value="">
+          {/* <MenuItem value="">
             <em>None</em>
-          </MenuItem>
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+          </MenuItem> */}
+          {props.fieldValues &&
+            props.fieldValues.map((opt) => {
+              return <MenuItem value={opt.value}>{opt.label}</MenuItem>;
+            })}
+
+          {/* <MenuItem value={20}>Twenty</MenuItem>
+          <MenuItem value={30}>Thirty</MenuItem> */}
         </Select>
       </FormControl>
       {/* <FormControl variant="filled" sx={{ m: 1, minWidth: 120 }}>

@@ -17,6 +17,16 @@ const Register = () => {
     {
       fieldLabel: "Sex",
       fieldComp: "select",
+      fieldValues: [
+        {
+          label: "Male",
+          value: "M",
+        },
+        {
+          label: "Female",
+          value: "F",
+        },
+      ],
     },
   ];
 

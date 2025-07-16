@@ -1,4 +1,5 @@
 import { Outlet, Link } from "react-router-dom";
+import "./style.css";
 // const Menu = () => {
 //   return (
 //     <>
@@ -39,29 +40,39 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function BasicGrid() {
   return (
-    <Box sx={{ flexGrow: 1 }} style={{ marginTop: "10px" }}>
+    <Box
+      sx={{ flexGrow: 1 }}
+      style={{ marginTop: "10px" }}
+      className="headerRow"
+    >
       <Grid container spacing={2}>
-        <Grid size={6}>
-          <Item>Header</Item>
+        <Grid size={2}>
+          <p className="logo">My Teacher.,</p>
         </Grid>
         <Grid size={6}>
-          <Grid container spacing={2}>
+          <Grid container spacing={2} className="menuList">
             <Grid size={2}>
-              <Item>
-                <Link to="/">Home</Link>
-              </Item>
+              <Link className="link" to="/">
+                Home
+              </Link>
             </Grid>
             <Grid size={2}>
-              <Item>
-                <Link to="/users">users</Link>
-              </Item>
+              <Link className="link" to="/users">
+                users
+              </Link>
             </Grid>
             <Grid size={2}>
-              <Item>
-                <Link to="/registration">Register</Link>
-              </Item>
+              <Link className="link" to="/registration">
+                Register
+              </Link>
             </Grid>
           </Grid>
+        </Grid>
+        <Grid size={4}>
+          <>
+            {" "}
+            <span className="userinitials">VK</span>
+          </>
         </Grid>
       </Grid>
     </Box>

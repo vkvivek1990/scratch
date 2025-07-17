@@ -22,7 +22,7 @@ const settings = {
 const chartSetting = {
   yAxis: [
     {
-      label: "rainfall (mm)",
+      label: "Technology (%)",
       width: 60,
     },
   ],
@@ -53,10 +53,10 @@ const Dashboard = () => {
             dataset={dataset}
             xAxis={[{ dataKey: "month" }]}
             series={[
-              { dataKey: "london", label: "London", valueFormatter },
-              { dataKey: "paris", label: "Paris", valueFormatter },
-              { dataKey: "newYork", label: "New York", valueFormatter },
-              { dataKey: "seoul", label: "Seoul", valueFormatter },
+              { dataKey: "Html", label: "Html", valueFormatter },
+              { dataKey: "Css", label: "Css", valueFormatter },
+              { dataKey: "JS", label: "JS", valueFormatter },
+              { dataKey: "Java", label: "Java", valueFormatter },
             ]}
             {...chartSetting}
           />

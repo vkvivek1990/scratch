@@ -7,6 +7,7 @@ import Userslist from "./views/usersList";
 import Register from "./views/usersList/registration/register";
 import Dashboard from "./views/dashboard/dashboard";
 import Reports from "./views/reports/reports";
+import Training from "./views/trainings/trainings";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/users" element={<Userslist />}></Route>
             <Route path="/registration" element={<Register />}></Route>
             <Route path="/reports" element={<Reports />}></Route>
+            <Route path="/trainings" element={<Training />}></Route>
           </Routes>
         </div>
       </BrowserRouter>

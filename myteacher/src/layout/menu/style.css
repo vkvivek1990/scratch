@@ -5,10 +5,12 @@
 
 p.logo {
     font-weight: bolder;
+    padding-left:26px;
 }
 .menuList {   
     margin-top: 13px;
     padding-bottom: 18px;
+    text-align: center;
 }
 a.link {
     text-decoration: none;

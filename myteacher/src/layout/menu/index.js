@@ -52,7 +52,7 @@ export default function BasicGrid() {
           <Grid container spacing={2} className="menuList">
             <Grid size={2}>
               <Link className="link" to="/">
-                Home
+                Dashboard
               </Link>
             </Grid>
             <Grid size={2}>
@@ -68,6 +68,11 @@ export default function BasicGrid() {
             <Grid size={2}>
               <Link className="link" to="/reports">
                 Reports
+              </Link>
+            </Grid>
+            <Grid size={2}>
+              <Link className="link" to="/trainings">
+                Trainings
               </Link>
             </Grid>
           </Grid>
